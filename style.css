@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(135deg, #d7f0e2, #f3efe7);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.container {
+  display: flex;
+  max-width: 1000px;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  background: transparent;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+/* Left Panel */
+.left-panel {
+  width: 50%;
+  background: #cdeae1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #3a3a3a;
+  text-align: center;
+}
+
+.left-panel h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.left-panel img {
+  margin-top: 30px;
+  border-radius: 15px;
+  width: 100%;
+  height: auto;
+}
+
+/* Right Panel */
+.right-panel {
+  width: 50%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Toggle Buttons */
+.form-toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.form-toggle button {
+  background: transparent;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #6b4c36;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.form-toggle button.active {
+  color: #a67c52;
+  border-color: #a67c52;
+}
+
+/* Form Box */
+.form-box {
+  background: rgba(246, 243, 239, 0.25);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  color: #2f2f2f;
+  animation: fadeIn 0.4s ease;
+}
+
+.form-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.form-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.5);
+  outline: none;
+  font-size: 1rem;
+}
+
+.form-box button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #a67c52;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-box button:hover {
+  background-color: #916844;
+  transform: scale(1.03);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hidden Form */
+.hidden {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-panel,
+  .right-panel {
+    width: 100%;
+    padding: 25px;
+  }
+
+  .left-panel img {
+    margin-top: 20px;
+  }
+
+  .form-box {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .left-panel h1 {
+    font-size: 2rem;
+  }
+
+  .form-toggle button {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+  }
+
+  .form-box input,
+  .form-box button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
